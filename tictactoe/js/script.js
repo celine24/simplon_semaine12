@@ -13,6 +13,7 @@
                 }
             }
         }
+        player = 1;
 	}
 	
 	function check() {
@@ -20,7 +21,10 @@
 	    || (children[7].className === 'player1' && children[9].className === 'player1' && children[11].className === 'player1')
 	    || (children[13].className === 'player1' && children[15].className === 'player1' && children[17].className === 'player1')
 	    || (children[1].className === 'player1' && children[9].className === 'player1' && children[17].className === 'player1')
-	    || (children[5].className === 'player1' && children[9].className === 'player1' && children[13].className === 'player1')) {
+	    || (children[5].className === 'player1' && children[9].className === 'player1' && children[13].className === 'player1')
+	    || (children[1].className === 'player1' && children[7].className === 'player1' && children[13].className === 'player1')
+	    || (children[3].className === 'player1' && children[9].className === 'player1' && children[15].className === 'player1')
+	    || (children[5].className === 'player1' && children[11].className === 'player1' && children[17].className === 'player1')) {
 	        alert('joueur 1 a gagné !');
 	        reinit();
 	    }
@@ -28,11 +32,13 @@
 	    || (children[7].className === 'player2' && children[9].className === 'player2' && children[11].className === 'player2')
 	    || (children[13].className === 'player2' && children[15].className === 'player2' && children[17].className === 'player2')
 	    || (children[1].className === 'player2' && children[9].className === 'player2' && children[17].className === 'player2')
-	    || (children[5].className === 'player2' && children[9].className === 'player2' && children[13].className === 'player2')) {
+	    || (children[5].className === 'player2' && children[9].className === 'player2' && children[13].className === 'player2')
+	    || (children[1].className === 'player2' && children[7].className === 'player2' && children[13].className === 'player2')
+	    || (children[3].className === 'player2' && children[9].className === 'player2' && children[15].className === 'player2')
+	    || (children[5].className === 'player2' && children[11].className === 'player2' && children[17].className === 'player2')) {
 	        alert('joueur 2 a gagné !');
 	        reinit();
 	    }
-	    
 	}
 	
 	

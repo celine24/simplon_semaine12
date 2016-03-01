@@ -38,9 +38,8 @@
 	    || (children[5].className === 'player2' && children[11].className === 'player2' && children[17].className === 'player2')) {
 	        alert('joueur 2 a gagné !');
 	        reinit();
-	    }
+	    }  
 	}
-	
 	
 	function isClicked(div) {
 	    if (div.getAttribute('class') !== null) {

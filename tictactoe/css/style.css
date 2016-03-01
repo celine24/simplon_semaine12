@@ -5,7 +5,7 @@ body {
 .wrapper {
     width:960px;
     margin:auto;
-    padding:50px;
+    padding:60px;
 }
 
 h1 {
@@ -40,4 +40,30 @@ h1 {
 
 .player2 {
     background-color:#36D7B7 !important;
+}
+
+.command {
+    padding-top:50px;
+    margin:auto;
+    width:150px;
+}
+.button {
+    width:150px;
+    padding:10px;
+    border:1px solid #86E2D5;
+    background-color:#86E2D5;
+    border-radius:5px;
+    margin:auto;
+    cursor:pointer;
+    color:#1BA39C;
+    font-family: 'Oswald', sans-serif;
+    text-transform:uppercase;
+    font-weight:lighter;
+    font-size:1.1em;
+}
+
+.button:hover {
+    background-color:#36D7B7;
+    color:#C8F7C5;
+    border:1px solid #36D7B7;
 }

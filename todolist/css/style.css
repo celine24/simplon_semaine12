@@ -1,7 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900italic,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 
 body {
     background-color:#FFFFF7;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing:1px;
 }
 
 .todo-container {
@@ -9,9 +12,18 @@ body {
     max-width:960px;
 }
 
+h1 {
+    text-align:center;
+    color:#87D37C;
+    text-transform:uppercase;
+    font-weight:800;
+    font-size:40px;
+}
+
 .todo-panel {
     width:80%;
     margin:auto;
+    color:#FFFFF7;
 }
 
 .todo-panel-header, .todo-panel-footer {
@@ -20,11 +32,19 @@ body {
 }
 
 .todo-name {
-    color:#FFFFF7;
     text-transform:uppercase;
-    font-family: 'Raleway', sans-serif;
     font-weight:500;
-    letter-spacing:0;
+    font-size:22px;
+    float:left;
+}
+
+.todo-info {
+    float:right;
+    font-size:12px;
+    line-height:26px;
+}
+
+.todo-nb {
     font-size:18px;
 }
 
@@ -37,7 +57,6 @@ body {
 .todo-panel-tasks li {
     margin:0;
     padding:10px 20px;
-    color:#FFFFF7;
 }
 
 .todo-panel-tasks li:nth-child(even) {
@@ -68,12 +87,24 @@ button.remove {
     color:#6a9177 !important;
 }
 
-.todo-info {
+.todo-filter {
     float:left;
+    font-size:12px;
+    line-height:26px;
+}
+
+.todo-strong {
+    font-weight:700;
 }
 
 .todo-form {
     float:right;
+}
+
+.todo-form input {
+    color:#FFFFF7;
+    background-color:transparent;
+    border:none;
 }
 
 .clear {

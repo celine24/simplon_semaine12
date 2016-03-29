@@ -13,7 +13,9 @@
         <h1>To Do List</h1>
         <div class="todo-panel" ng-controller="toDoCtrl">
             <div class="todo-panel-header">
-                <span class="todo-name">My To Do List</span>
+                <div class="todo-name">My To Do List</div>
+                <div class="todo-info"><span class="todo-nb">{{ tasksLength }}</span> tâches restantes</div>
+                <div class="clear"></div>
             </div>
             <div class="todo-panel-body">
                 <ul class="todo-panel-tasks" >
@@ -24,8 +26,12 @@
                 </ul>
             </div>
             <div class="todo-panel-footer">
-                <div class="todo-info"><strong>{{ tasksLength }}</strong> tâches restantes</div>
-                <div class="todo-filter"></div>
+                
+                <div class="todo-filter">
+                    <span class="todo-strong">toutes</span> - 
+                    <span class="">terminées</span> - 
+                    <span class="">restantes</span>
+                </div>
                 <div class="todo-form">
                     <form ng-submit="addTask(newTask)">
                         <input type="text" ng-model="newTask" placeholder="ajouter une tâche" autofocus autocomplete="off" />

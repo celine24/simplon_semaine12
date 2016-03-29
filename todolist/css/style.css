@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900italic,900);
+
+body {
+    background-color:#FFFFF7;
+}
+
+.todo-container {
+    margin:0 auto;
+    max-width:960px;
+}
+
+.todo-panel {
+    width:80%;
+    margin:auto;
+}
+
+.todo-panel-header, .todo-panel-footer {
+    background-color:#006442;
+    padding:15px 20px;
+}
+
+.todo-name {
+    color:#FFFFF7;
+    text-transform:uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight:500;
+    letter-spacing:0;
+    font-size:18px;
+}
+
+.todo-panel-tasks {
+    padding:0 !important;
+    margin:0 !important;
+}
+
+.todo-panel-tasks li {
+    margin:0;
+    padding:10px 20px;
+    color:#FFFFF7;
+}
+
+.todo-panel-tasks li:nth-child(even) {
+    background-color:#6B9362;
+}
+
+.todo-panel-tasks li:nth-child(odd) {
+    background-color:#407A52;
+}
+
+button {
+    border:none;
+    background-color:transparent;
+    color:#FFFFF7;
+    padding:2px 10px;
+}
+
+button.remove {
+    float:right;
+    display:none;
+}
+
+.todo-panel-tasks li:hover button.remove {
+    display:block;
+}

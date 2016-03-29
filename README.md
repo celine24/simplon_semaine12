@@ -6,3 +6,4 @@ Ce repository contient tous les exercices demandés pour valider la SEMAINE 12 !
 
 - TP auto complétion (non réalisé : corrigé OPENCLASSROOM)
 - Tic Tac Toe
+- To Do List 

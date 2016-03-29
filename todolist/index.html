@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <meta charset="UTF-8" />
+</head>
+<body ng-app="app">
+
+    <div class="todo-container">
+        <h1>To Do List</h1>
+        <div class="todo-panel" ng-controller="toDoCtrl">
+            <div class="todo-panel-header">
+                <span class="todo-name">My To Do List</span>
+            </div>
+            <div class="todo-panel-body">
+                <ul class="todo-panel-tasks" >
+                    <li ng-repeat="task in tasks" class="{{ $index }}">
+                        <input type="checkbox" /> 
+                        <label>{{ task.name }}</label> <button class="remove" ng-click="rmTask($index)"> <i class="fa fa-times"></i></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="todo-panel-footer">
+                <form action="">
+                    <input type="text" ng-model="newTask" placeholder="ajouter une tâche" autofocus autocomplete="off" />
+                    <button type="submit" class="add" ng-click="addTask(newTask)"><i class="fa fa-plus"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controller/toDo.js"></script>
+</body>
+</html>

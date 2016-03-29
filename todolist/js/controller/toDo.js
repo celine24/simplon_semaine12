@@ -1,18 +1,22 @@
 app.controller('toDoCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.tasks = [
         { name : "Tester la To Do List",
-          completed : false
+          checked : true
         },
         { name : "Encore une fois pour le plaisir",
-          completed : false
+          checked : false
         }
     ];
     
     $scope.addTask = function (newTask) {
         if (newTask != null) {
-            var obj = {};
-            obj["name"] = newTask; 
-            $scope.tasks.push(obj);
+            $scope.tasks.push(
+                {
+                    name : newTask,
+                    checked : false
+                }
+            );
+            $scope.newTask = "";
         }
         else {
             alert("Merci de saisir une tâche.");
@@ -22,4 +26,8 @@ app.controller('toDoCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.rmTask = function (task) {
         $scope.tasks.splice(task, 1);
     };
+    
+    $scope.$watch("tasks", function() {
+        $scope.tasksLength = $scope.tasks.length;
+    }, true);
 }]);

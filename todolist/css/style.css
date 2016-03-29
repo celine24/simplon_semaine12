@@ -31,6 +31,7 @@ body {
 .todo-panel-tasks {
     padding:0 !important;
     margin:0 !important;
+    list-style:none !important;
 }
 
 .todo-panel-tasks li {
@@ -61,4 +62,20 @@ button.remove {
 
 .todo-panel-tasks li:hover button.remove {
     display:block;
+}
+
+.checked {
+    color:#6a9177 !important;
+}
+
+.todo-info {
+    float:left;
+}
+
+.todo-form {
+    float:right;
+}
+
+.clear {
+    clear:both;
 }

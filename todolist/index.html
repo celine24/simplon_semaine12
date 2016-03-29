@@ -17,17 +17,22 @@
             </div>
             <div class="todo-panel-body">
                 <ul class="todo-panel-tasks" >
-                    <li ng-repeat="task in tasks" class="{{ $index }}">
-                        <input type="checkbox" /> 
+                    <li ng-repeat="task in tasks" ng-class="{checked : task.checked}" class="{{ $index }}">
+                        <input type="checkbox" ng-model="task.checked" /> 
                         <label>{{ task.name }}</label> <button class="remove" ng-click="rmTask($index)"> <i class="fa fa-times"></i></button>
                     </li>
                 </ul>
             </div>
             <div class="todo-panel-footer">
-                <form action="">
-                    <input type="text" ng-model="newTask" placeholder="ajouter une tâche" autofocus autocomplete="off" />
-                    <button type="submit" class="add" ng-click="addTask(newTask)"><i class="fa fa-plus"></i></button>
-                </form>
+                <div class="todo-info"><strong>{{ tasksLength }}</strong> tâches restantes</div>
+                <div class="todo-filter"></div>
+                <div class="todo-form">
+                    <form ng-submit="addTask(newTask)">
+                        <input type="text" ng-model="newTask" placeholder="ajouter une tâche" autofocus autocomplete="off" />
+                        <button type="submit" class="add"><i class="fa fa-plus"></i></button>
+                    </form>
+                </div>
+                <div class="clear"></div>
             </div>
         </div>
     </div>

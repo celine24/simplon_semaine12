@@ -2,7 +2,7 @@ app.controller('toDoCtrl', ['$scope', '$http', 'filterFilter', function ($scope,
     $scope.tasks = [];
     $scope.todoName = "Chargement...";
     
-    $http.get('todos.json').success(function(data){
+    $http.get('tasks.php').success(function(data){
         $scope.tasks = data;
         $scope.todoName = "My To Do List";
     });

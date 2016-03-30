@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 
 body {
-    background-color:#FFFFF7;
+    background-color:#87D37C;
     font-family: 'Raleway', sans-serif;
     letter-spacing:1px;
 }
@@ -14,7 +14,7 @@ body {
 
 h1 {
     text-align:center;
-    color:#87D37C;
+    color:#006442;
     text-transform:uppercase;
     font-weight:800;
     font-size:40px;
@@ -75,12 +75,28 @@ button {
     padding:2px 10px;
 }
 
-button.remove {
+button.remove, button.edit {
     float:right;
     display:none;
 }
 
-.todo-panel-tasks li:hover button.remove {
+.todo-edit {
+    display:none;
+}
+
+input.todo-edit {
+    width:80%;
+}
+
+.todo-panel-tasks li.editing .todo-edit {
+    display:block;
+}
+
+.todo-panel-tasks li.editing label {
+    display:none;
+}
+
+.todo-panel-tasks li:hover button.remove, .todo-panel-tasks li:hover button.edit {
     display:block;
 }
 
@@ -94,12 +110,35 @@ button.remove {
 
 .todo-controls {
     float:left;
+    padding-top:4px;
+}
+
+button.removeAll {
+    padding-top:3px;
 }
 
 .todo-filter {
     float:left;
     font-size:12px;
-    line-height:26px;
+}
+
+.todo-filter ul {
+    margin-top:7px;
+    line-height:18px;
+}
+
+.todo-filter li {
+    display:inline-block;
+    list-style:none;
+}
+
+.todo-filter a {
+    text-decoration: none !important;
+    color:#FFFFF7;
+}
+
+.todo-filter .selected {
+    font-weight:700;
 }
 
 .todo-strong {
@@ -110,13 +149,16 @@ button.remove {
     float:right;
 }
 
-.todo-form input {
+input {
     color:#FFFFF7;
+    opacity:0.5;
     background-color:transparent;
     border:none;
+    padding:5px;
     font-size:15px;
     line-height:20px;
     letter-spacing: 1px;
+    outline:none !important;
 }
 
 .clear {
@@ -140,7 +182,7 @@ button.remove {
   cursor: pointer;    /* affiche un curseur adapté */
   font-size:15px;
   line-height:20px;
-  padding-top:1px;
+  padding-top:2px;
 }
 
 /* Aspect des checkboxes */

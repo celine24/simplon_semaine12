@@ -20,8 +20,10 @@
             <div class="todo-panel-body">
                 <ul class="todo-panel-tasks" >
                     <li ng-repeat="task in tasks" ng-class="{checked : task.checked}" class="{{ $index }}">
-                        <input type="checkbox" ng-model="task.checked" /> 
-                        <label>{{ task.name }}</label> <button class="remove" ng-click="rmTask($index)"> <i class="fa fa-times"></i></button>
+                        <input type="checkbox" ng-model="task.checked" id="task{{$index}}" /> 
+                        <label for="task{{$index}}">{{ task.name }}</label>
+
+ <button class="remove" ng-click="rmTask($index)"> <i class="fa fa-times"></i></button>
                     </li>
                 </ul>
             </div>

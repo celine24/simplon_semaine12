@@ -2,9 +2,6 @@ app.controller('toDoCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.tasks = [
         { name : "Tester la To Do List",
           checked : true
-        },
-        { name : "Encore une fois pour le plaisir",
-          checked : false
         }
     ];
     

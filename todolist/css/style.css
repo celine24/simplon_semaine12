@@ -92,6 +92,10 @@ button.remove {
     color:#7ba489 !important;
 }
 
+.todo-controls {
+    float:left;
+}
+
 .todo-filter {
     float:left;
     font-size:12px;
@@ -110,6 +114,9 @@ button.remove {
     color:#FFFFF7;
     background-color:transparent;
     border:none;
+    font-size:15px;
+    line-height:20px;
+    letter-spacing: 1px;
 }
 
 .clear {

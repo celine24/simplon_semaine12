@@ -1,9 +1,11 @@
-app.controller('toDoCtrl', ['$scope', '$http', function ($scope, $http) {
-    $scope.tasks = [
-        { name : "Tester la To Do List",
-          checked : true
-        }
-    ];
+app.controller('toDoCtrl', ['$scope', '$http', 'filterFilter', function ($scope, $http, filterFilter) {
+    $scope.tasks = [];
+    $scope.todoName = "Chargement...";
+    
+    $http.get('todos.json').success(function(data){
+        $scope.tasks = data;
+        $scope.todoName = "My To Do List";
+    });
     
     $scope.addTask = function (newTask) {
         if (newTask != null) {
@@ -25,6 +27,13 @@ app.controller('toDoCtrl', ['$scope', '$http', function ($scope, $http) {
     };
     
     $scope.$watch("tasks", function() {
-        $scope.tasksLength = $scope.tasks.length;
+        $scope.tasksLength = filterFilter($scope.tasks, {checked:false}).length;
+        $scope.allchecked = !$scope.tasksLength;
     }, true);
+    
+    $scope.checkAll = function (allchecked) {
+        $scope.tasks.forEach(function(task) {
+            task.checked = allchecked;
+        });
+    };
 }]);

@@ -13,7 +13,7 @@
         <h1>To Do List</h1>
         <div class="todo-panel" ng-controller="toDoCtrl">
             <div class="todo-panel-header">
-                <div class="todo-name">My To Do List</div>
+                <div class="todo-name">{{ todoName }}</div>
                 <div class="todo-info"><span class="todo-nb">{{ tasksLength }}</span> tâches restantes</div>
                 <div class="clear"></div>
             </div>
@@ -22,13 +22,17 @@
                     <li ng-repeat="task in tasks" ng-class="{checked : task.checked}" class="{{ $index }}">
                         <input type="checkbox" ng-model="task.checked" id="task{{$index}}" /> 
                         <label for="task{{$index}}">{{ task.name }}</label>
-
- <button class="remove" ng-click="rmTask($index)"> <i class="fa fa-times"></i></button>
+                        <button class="remove" ng-click="rmTask($index)"> 
+                            <i class="fa fa-times"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
             <div class="todo-panel-footer">
-                
+                <div class="todo-controls">
+                    <input type="checkbox" ng-model="allchecked" id="check-all" ng-click="checkAll(allchecked)" /> 
+                    <label for="check-all"></label>
+                </div>
                 <div class="todo-filter">
                     <span class="todo-strong">toutes</span> - 
                     <span class="">terminées</span> - 

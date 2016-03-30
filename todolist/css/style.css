@@ -215,6 +215,10 @@ input {
 .todo-panel-tasks li:nth-child(odd) [type="checkbox"]:checked + label:before {
   border: 2px solid #7ba489;
 }
+
+.todo-panel-footer [type="checkbox"]:checked + label:before {
+    border: 2px solid #8eb386;
+}
  
 /* Aspect général de la coche */
 [type="checkbox"]:not(:checked) + label:after,
@@ -256,4 +260,28 @@ input {
 /* aspect au focus de l'élément */
 [type="checkbox"]:checked:focus + label:before,
 [type="checkbox"]:not(:checked):focus + label:before {
+}
+
+@media screen and (max-width: 720px) {
+    .todo-panel {
+        margin:0 auto;
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+    .todo-name, .todo-info {
+        width:100%;
+        text-align:center;
+    }
+    .todo-form {
+        width:100%;
+    }
+
+    .todo-form form {
+        margin:auto;
+        width:230px;
+    }
+
 }
